@@ -1,3 +1,5 @@
+<pre>
+
 # include <stdio.h>
 
 int power2(int n) {
