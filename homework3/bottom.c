@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int f(int n) {
+  if (n <= 0) return 0;
+  if (n == 1) return 1;
+
+  int fib[100] = {0};
+  fib[1] = 1;
+  for (int i = 2; i <= n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  return fib[n];
+}
+
+int main() {
+  printf("f(7) = %d\n", f(7));
+  return 0;
+}
