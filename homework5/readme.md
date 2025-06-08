@@ -1,45 +1,25 @@
 ### 林家煒 111210564 
 
-### power.cpp
-#include <stdio.h>
-
-int power(int base, int exp) {
-    int result = 1;
-    for (int i = 0; i < exp; i++) {
-        result *= base;
-    }
-    return result;
-}
-
-int main() {
-    int base = 3, exp = 2;
-    int result = power(base, exp);
-    printf("%d^%d = %d\n", base, exp, result);
-    return 0;
-}
-
-
- ### 編譯與執行 power.cpp
-sh
-複製
-編輯
-g++ power.cpp
-./a.exe
- ### 產生目的檔 .o
-sh
-複製
-編輯
+產生組合語言.s檔
+```
+g++ -S main.cpp
+```
+執行power.cpp
+```
+g++ mian.cpp
+ ./a.exe
+```
+產生目的檔.o檔
+```
 g++ -c power.cpp
-##將該目的檔反組譯
-sh
-複製
-編輯
+```
+將該目的檔反組譯
+```
 objdump -d power.o
-🔧 objdump 反組譯輸出
-asm
-複製
-編輯
+```
+```sh
 file format pe-i386
+
 
 Disassembly of section .text:
 
@@ -88,14 +68,14 @@ Disassembly of section .text:
   8b:   b8 00 00 00 00          mov    $0x0,%eax
   90:   c9                      leave
   91:   c3                      ret
-### 印出 .o 目的檔的表頭
-sh
-複製
-編輯
+  92:   90                      nop
+  93:   90                      nop
+```
+印出該目的檔的表頭
+```
 objdump -h power.o
-sh
-複製
-編輯
+```
+```sh
 file format pe-i386
 
 Sections:
@@ -112,3 +92,4 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   5 .eh_frame     00000058  00000000  00000000  000001c8  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+```
