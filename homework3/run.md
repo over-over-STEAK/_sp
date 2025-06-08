@@ -1,3 +1,5 @@
+
+```sh
 (env) cccimac@cccimacdeiMac 00d-c4symdump % ./test.sh
 + gcc -w c4.c -o c4
 + ./c4 -s test/fib.c
@@ -97,3 +99,4 @@ hello, world
 exit(0) cycle = 9
 exit(0) cycle = 27265
 exit(0) cycle = 11797515
+```
