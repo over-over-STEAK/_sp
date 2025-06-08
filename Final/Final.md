@@ -1,4 +1,4 @@
-# 🎓 期中期末整合報告
+#  期中期末整合報告
 **學號**：111210564  
 **姓名**：林家煒  
 **系級**：資工二  
@@ -15,16 +15,16 @@
 
 ---
 
-## 🧩 homework-1：do-while 與詞彙分析器
+##  homework-1：do-while 與詞彙分析器
 
-### ✅ do...while 語法
+### do...while 語法
 ```c
 do {
     // 執行區塊
 } while (條件);
 ```
 
-### ✅ 詞彙分析器 scan 函式
+### 詞彙分析器 scan 函式
 ```c
 char *scan() {
   while (isspace(*p)) p++;
@@ -85,9 +85,9 @@ SI
 
 ---
 
-## 🔁 homework-3：AsmFib 組合碼分析
+##  homework-3：AsmFib 組合碼分析
 
-### ✅ fib 函式邏輯
+### fib 函式邏輯
 ```c
 int f(int n) {
   if (n <= 0) return 0;
@@ -96,7 +96,7 @@ int f(int n) {
 }
 ```
 
-### ✅ 結果展示
+###  結果展示
 ```
 f(7) = 13
 exit(8) cycle = 920
@@ -106,7 +106,7 @@ exit(8) cycle = 920
 
 ## 🧠 homework-4：if 條件語句支援
 
-### ✅ 支援程式碼（節錄）
+###  支援程式碼（節錄）
 ```c
 if (lookahead.type == TOKEN_IDENTIFIER && strcmp(lookahead.text, "if") == 0) {
     advance();
@@ -128,15 +128,15 @@ case AST_IF: {
 
 ---
 
-## 🔁 homework-5：while 迴圈支援
+##  homework-5：while 迴圈支援
 
-### ✅ 測試程式碼
+### 測試程式碼
 ```c
 x = 3
 while x print x x = x - 1
 ```
 
-### ✅ 評估邏輯
+### 評估邏輯
 ```c
 case AST_WHILE: {
     while (eval(node->left)) {
@@ -148,7 +148,7 @@ case AST_WHILE: {
 
 ---
 
-## 🧪 Midterm：C 語言直譯器六大模組整合
+##  Midterm：C 語言直譯器六大模組整合
 
 | 檔案名稱         | 功能描述                     |
 |------------------|------------------------------|
