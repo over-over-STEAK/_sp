@@ -1,11 +1,19 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int mul3(int a, int b, int c) {
-    return a * b * c;
+int power(int base, int exp) {
+    int result = 1;
+    int i = 0;
+    while (i < exp) {
+        result *= base;
+        i++;
+    }
+    return result;
 }
 
 int main() {
-    cout << "result: " << mul3(5, 3, 6) << endl;
+    int base = 3, exp = 2;
+    int result = power(base, exp);
+    printf("%d^%d = %d\n", base, exp, result);
     return 0;
 }
+
