@@ -1,14 +1,6 @@
 #include <stdio.h>
 
-int power(int base, int exp) {
-    int result = 1;
-    int i = 0;
-    while (i < exp) {
-        result *= base;
-        i++;
-    }
-    return result;
-}
+extern int power(int base, int exp);
 
 int main() {
     int base = 3, exp = 2;
